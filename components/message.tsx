@@ -203,7 +203,7 @@ const Message = ({
         <Flex align="center" gap="sm">
           <Avatar src={`/avatars/${user?.username?.[0]}.png`} size="sm" />
           <Text fz="sm">
-            {user.username} {userId === user._id && '(you)'}
+            {user.username} {userId === user._id && '(siz)'}
           </Text>
           {user.isOnline || userId === user._id ? (
             <Box
@@ -236,7 +236,7 @@ const Message = ({
       text: (
         <Flex align="center" gap="sm">
           <GoMegaphone />
-          <Text fz="sm">@channel Notify everyone in this channel.</Text>
+          <Text fz="sm">@channel yazarak herkese bildirim gönderebilirsiniz.</Text>
         </Flex>
       ),
       value: 'channel',
@@ -245,7 +245,7 @@ const Message = ({
       text: (
         <Flex align="center" gap="sm">
           <GoMegaphone />
-          <Text fz="sm">@here Notify every online member in this channel.</Text>
+          <Text fz="sm">@here yazarak bu kanala üye olan herkese mesaj gönderebilirsiniz.</Text>
         </Flex>
       ),
       value: 'here',
@@ -296,20 +296,20 @@ const Message = ({
               {type === 'channel' && (
                 <>
                   <Text weight="bold" c="white">
-                    This is the very first begining of the
+                  Bu ilk başlangıçtır.
                     <Text span c={theme.colors.blue[5]}>
                       {' '}
                       #{String(selected?.name)?.toLowerCase()}{' '}
                     </Text>{' '}
-                    channel
+                    kanal
                   </Text>
                   <Text fz="sm" c={theme.colors.dark[2]}>
-                    This channel is for everything{' '}
+                  Bu kanal her şey için{' '}
                     <Text span> #{String(selected?.name)?.toLowerCase()} </Text>{' '}
-                    . Hold meetings, share docs, and make decisions together
-                    with your team. &nbsp;
+                    . Toplantılar düzenleyin, dokümanları paylaşın ve birlikte kararlar alın
+                    ekibinizle birlikte. &nbsp;
                     <UnstyledButton fz="sm" c={theme.colors.blue[5]}>
-                      Edit description
+                      Açıklamayı düzenle
                     </UnstyledButton>
                   </Text>
                   <UnstyledButton
@@ -320,7 +320,7 @@ const Message = ({
                   >
                     <Flex align="center" justify="start" gap="xs">
                       <BiUserPlus size="2.2rem" />
-                      <Text>Add people</Text>
+                      <Text>Kişi ekle</Text>
                     </Flex>
                   </UnstyledButton>
                 </>
@@ -330,36 +330,36 @@ const Message = ({
                   {selected?.isSelf ? (
                     <>
                       <Text weight="bold" c="white">
-                        This space is just for you.
+                      Bu alan sadece sizin için.
                       </Text>
                       <Text fz="sm" c={theme.colors.dark[2]}>
-                        Jot down notes, list your to-dos, or keep links and
-                        files handy. You can also talk to yourself here, but
-                        please bear in mind you’ll have to supply both sides of
-                        the conversation. &nbsp;
+                      Notlar alın, yapılacak işlerinizi listeleyin veya bağlantıları ve
+                        kullanışlı dosyalar. Burada kendinizle de konuşabilirsiniz, ancak
+                        lütfen her iki tarafı da düşünmeniz gerektiğini unutmayın
+                        Konuşma. &nbsp;
                       </Text>
                       <UnstyledButton mt="lg" fz="sm" c={theme.colors.blue[5]}>
                         <Flex align="center" justify="start" gap="xs">
                           <BiEditAlt size="2rem" />
-                          <Text>Edit profile</Text>
+                          <Text>Profili düzenle</Text>
                         </Flex>
                       </UnstyledButton>
                     </>
                   ) : (
                     <>
                       <Text weight="bold" c="white">
-                        This conversation is just between
+                      Bu konuşma sadece 
                         <Text span c={theme.colors.blue[5]}>
                           {' '}
                           @{String(selected?.name)?.toLowerCase()}{' '}
                         </Text>{' '}
-                        and you.
+                        ve sizin aranızda.
                       </Text>
                       <Text fz="sm" c={theme.colors.dark[2]}>
-                        Hold meetings, share docs, and make decisions together
-                        with your team. &nbsp;
+                      Toplantılar düzenleyin, dokümanları paylaşın ve ekibiniz ile birlikte kararlar alın
+                      &nbsp;
                         <UnstyledButton fz="sm" c={theme.colors.blue[5]}>
-                          Edit description
+                          Açıklamayı Düzenle
                         </UnstyledButton>
                       </Text>
                     </>

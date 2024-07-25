@@ -56,12 +56,12 @@ const Signin: NextPage = () => {
         <Flex direction="column" align="center">
           <SlackLogo />
           <Text fz="3xl" fw={600} mt="3xl" c="white">
-            Sign in to Slack
+            Qnter'a giriş yap.
           </Text>
           <Text fz="sm" mt="xs">
-            We suggest using the{' '}
+           İşiniz için kullandığınız{' '}
             <Text span fw={600}>
-              email address you use at work.
+              mail adresini kullanmanızı öneririz.
             </Text>
           </Text>
 
@@ -75,15 +75,15 @@ const Signin: NextPage = () => {
                 <Input
                   required
                   label="Email"
-                  placeholder="hello@adeolaadeoti.xyz"
+                  placeholder="kişi@domain.xyz"
                   value={form.values.email}
                   onChange={(event) =>
                     form.setFieldValue('email', event.currentTarget.value)
                   }
-                  error={form.errors.email && 'Invalid email'}
+                  error={form.errors.email && 'Geçersiz mail adresi'}
                 />
                 <Button loading={mutation.isLoading} type="submit">
-                  {mutation.isLoading ? '' : 'Sign in with email'}
+                  {mutation.isLoading ? '' : 'Email ile giriş yap'}
                 </Button>
                 <Divider label="or" labelPosition="center" my="md" />
                 <MantineButton
@@ -113,14 +113,14 @@ const Signin: NextPage = () => {
                     },
                   })}
                 >
-                  Sign in with Google
+                  Google ile giriş yap
                 </MantineButton>
                 <Stack spacing="xs" mt="lg">
                   <Text size="xs" align="center">
-                    New to Slack?
+                    Qnter'da yeni misin ?
                   </Text>
                   <Anchor size="xs" align="center" href="/register">
-                    Create an account
+                    Hesap Oluştur
                   </Anchor>
                 </Stack>
               </Stack>

@@ -62,7 +62,7 @@ export default function MessageLayout({
     },
     validate: {
       userIds: (val) =>
-        val.length > 0 ? null : 'At least one person must be selected',
+        val.length > 0 ? null : 'En az bir kişi seçilmelidir',
     },
   })
 
@@ -82,7 +82,7 @@ export default function MessageLayout({
       close()
       form.reset()
       notifications.show({
-        message: `Teammate(s) added successful`,
+        message: `Takım arkadaşı başarıyla eklendi`,
         color: 'green',
         p: 'md',
       })
@@ -124,7 +124,7 @@ export default function MessageLayout({
         organisationData?.profile?._id as string,
       ])
       notifications.show({
-        message: `You've joined the ${selected?.name} successfully`,
+        message: `Başarılı bir şekilde ${selected?.name} kanalına katıldınız!`,
         color: 'green',
         p: 'md',
       })
@@ -136,7 +136,7 @@ export default function MessageLayout({
       <Modal
         opened={opened}
         onClose={close}
-        title={`Add people to #${selected?.name}`}
+        title={`Şu kanala ekle #${selected?.name}`}
         centered
         size="45.25rem"
         radius="lg"
@@ -157,7 +157,7 @@ export default function MessageLayout({
             setIsDisabled(false)
           }}
           searchable
-          nothingFound="Nothing found"
+          nothingFound="Burada bir şey yok !"
           valueComponent={({ label }) => (
             <Flex gap="sm">
               <Avatar
@@ -173,12 +173,12 @@ export default function MessageLayout({
           )}
           radius="md"
           data={coWorkersSelect as any}
-          placeholder="Select a teammate"
+          placeholder="Takım arkadaşı seç"
         />
 
         <Text fz="xs" mt="lg">
-          Expand your team collaboration by inviting your teammates to join the
-          #{selected?.name} channel. Share insights, and achieve more together.
+        Ekip arkadaşlarınızı da davet ederek ekip işbirliğinizi genişletin
+        #{selected?.name} kanalı. İçgörülerinizi paylaşın ve birlikte daha fazlasını başarın.
         </Text>
         <Flex align="center" gap="md" mt="lg">
           <Button
@@ -192,7 +192,7 @@ export default function MessageLayout({
             loading={mutation.isLoading}
             type="submit"
           >
-            {mutation.isLoading ? '' : 'Send invite'}
+            {mutation.isLoading ? '' : 'Davet gönder'}
           </Button>
         </Flex>
       </Modal>
@@ -292,13 +292,13 @@ export default function MessageLayout({
             <Center>
               <Paper radius="lg" p="xl" withBorder mt="-4rem">
                 <Text align="center" fz="sm" mb="md">
-                  Ready to dive into the world of{' '}
+                 Bu kanala katılmaya hazır ol ! :{' '}
                   <Text span fw="bold">
                     {' '}
                     #{selected?.name}
                   </Text>
-                  ? <br /> Join the conversation, collaborate with your team,
-                  and make things happen!
+                  ? <br /> Sohbete katılın, ekibinizle işbirliği yapın,
+                  
                 </Text>
                 <Center>
                   <Button
@@ -308,7 +308,7 @@ export default function MessageLayout({
                     type="submit"
                   >
                     <Text align="center">
-                      {joinMutation.isLoading ? '' : 'Join Channel'}
+                      {joinMutation.isLoading ? '' : 'Kanala Katıl'}
                     </Text>
                   </Button>
                 </Center>

@@ -93,7 +93,7 @@ const TagInputs = React.forwardRef<HTMLInputElement, TagInputsType>(
               form.setFieldValue('email', event.currentTarget.value)
             }
             onKeyDown={handleEnterKey}
-            error={form.errors.email && 'Invalid email'}
+            error={form.errors.email && 'Geçersiz mail adresi'}
           />
         </Flex>
       </Paper>

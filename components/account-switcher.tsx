@@ -99,31 +99,31 @@ export default function AccountSwitcher({ data }: AccountSwitcherProps) {
             onClick={() => router.push('/')}
             icon={<TbHeart size="1.5rem" color={theme.colors.red[6]} />}
           >
-            Workspaces
+            Çalışma Alanları
           </Menu.Item>
           <Menu.Item
             p="sm"
             fz="xs"
             icon={<TbStar size="1.5rem" color={theme.colors.yellow[6]} />}
           >
-            Saved posts
+            Kayıtlı gönderiler
           </Menu.Item>
           <Menu.Item
             p="sm"
             fz="xs"
             icon={<TbMessage size="1.5rem" color={theme.colors.blue[6]} />}
           >
-            Your comments
+            Yorumlarınız
           </Menu.Item>
 
           <Menu.Label p="sm" fz="xs">
-            Settings
+            Ayarlar
           </Menu.Label>
           <Menu.Item p="sm" fz="xs" icon={<TbSettings size="1.5rem" />}>
-            Account settings
+            Hesap Ayarları
           </Menu.Item>
           <Menu.Item p="sm" fz="xs" icon={<TbSwitchHorizontal size="1.5rem" />}>
-            Change account
+            Hesap Değiştir
           </Menu.Item>
           <Menu.Item
             onClick={handleLogout}
@@ -131,16 +131,16 @@ export default function AccountSwitcher({ data }: AccountSwitcherProps) {
             fz="xs"
             icon={<TbLogout size="1.5rem" />}
           >
-            Logout
+            Çıkış Yap
           </Menu.Item>
 
           <Menu.Divider />
 
           <Menu.Label p="sm" fz="xs">
-            Danger zone
+            Tehlikeli Bölge
           </Menu.Label>
           <Menu.Item p="sm" fz="xs" icon={<TbPlayerPause size="1.5rem" />}>
-            Pause subscription
+            Aboneliği durdur
           </Menu.Item>
           <Menu.Item
             p="sm"
@@ -148,7 +148,7 @@ export default function AccountSwitcher({ data }: AccountSwitcherProps) {
             color="red"
             icon={<TbTrash size="1.5rem" />}
           >
-            Delete account
+            Hesabımı sil
           </Menu.Item>
         </Menu.Dropdown>
       </Menu>

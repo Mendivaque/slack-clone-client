@@ -97,7 +97,7 @@ export default function DefaultLayout({
     },
     validate: {
       name: (val) =>
-        val.length > 3 ? null : 'Channel name must be more than three words',
+        val.length > 3 ? null : 'Kanal adı üç harften fazla olmalıdır',
     },
   })
 
@@ -118,7 +118,7 @@ export default function DefaultLayout({
       close()
       form.reset()
       notifications.show({
-        message: `#${form.values.name} channel created succesfully`,
+        message: `#${form.values.name} kanalı başarıyla oluşturuldu`,
         color: 'green',
         p: 'md',
       })
@@ -131,7 +131,7 @@ export default function DefaultLayout({
       organisationId,
     },
     validate: {
-      emails: (val) => (val.length > 0 ? null : 'Email must be more than one'),
+      emails: (val) => (val.length > 0 ? null : 'E-posta birden fazla olmalıdır'),
     },
   })
 
@@ -152,7 +152,7 @@ export default function DefaultLayout({
       inviteClose()
       form.reset()
       notifications.show({
-        message: `Invite sent successfully to ${inviteForm.values.emails.join(
+        message: `Davet gönderildi: ${inviteForm.values.emails.join(
           ', '
         )}`,
         color: 'green',
@@ -180,7 +180,7 @@ export default function DefaultLayout({
       <Modal
         opened={inviteOpened}
         onClose={inviteClose}
-        title={`Invite people to ${organisationData?.name}`}
+        title={`Davet edildi: ${organisationData?.name}`}
         centered
         size="45.25rem"
         radius="lg"
@@ -209,14 +209,14 @@ export default function DefaultLayout({
             loading={inviteMutation.isLoading}
             type="submit"
           >
-            {inviteMutation.isLoading ? '' : 'Send invite'}
+            {inviteMutation.isLoading ? '' : 'Davet gönder'}
           </Button>
         </Flex>
       </Modal>
       <Modal
         opened={opened}
         onClose={close}
-        title="Create a channel"
+        title="Kanal Oluştur"
         centered
         size="lg"
         radius="lg"
@@ -239,22 +239,22 @@ export default function DefaultLayout({
             <Input
               data-autofocus
               required
-              label="Name"
+              label="Ad"
               placeholder="e.g plan-budget"
               icon={<TbHash />}
               onChange={(event) =>
                 form.setFieldValue('name', event.currentTarget.value)
               }
               error={
-                form.errors.name && 'Channel name must be more than three words'
+                form.errors.name && 'Kanal adı 3 harften fazla olmalıdır!'
               }
             />
             <Text size="xs" mb="lg">
-              Channels are where conversations happen around a topic. Use a name
-              that is easy to find and understand.
+            Kanallar, bir konu etrafında konuşmaların gerçekleştiği yerlerdir. Bir isim kullanın
+            bulması ve anlaması kolay.
             </Text>
             <Button loading={mutation.isLoading} type="submit">
-              {mutation.isLoading ? '' : 'Create channel'}
+              {mutation.isLoading ? '' : 'Kanal Oluştur'}
             </Button>
           </Stack>
         </form>
@@ -275,7 +275,7 @@ export default function DefaultLayout({
             <Navbar.Section className={classes.section} px="0" mx="sm">
               <Group pl="sm" align="center" position="apart">
                 <Text size="xs" mb="sm" color="dimmed">
-                  Channels
+                  Kanallar
                 </Text>
                 <Tooltip label="Add channels" withArrow position="right">
                   <ActionIcon onClick={open} variant="default" size={30}>
@@ -325,7 +325,7 @@ export default function DefaultLayout({
             <Navbar.Section className={classes.section} px="0" mx="sm">
               <Group pl="sm" align="center" position="apart">
                 <Text size="xs" weight="bold" mb="sm" color="dimmed">
-                  Direct messages
+                  Direkt Mesajlar
                 </Text>
                 <Tooltip
                   label={`Invite people to ${organisationData?.name}`}

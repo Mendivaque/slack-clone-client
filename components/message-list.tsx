@@ -337,7 +337,7 @@ export default function MessageList({
                     c={theme.colors.dark[3]}
                     className={classes.reply}
                   >
-                    Last reply{' '}
+                    Son Cevaplama{' '}
                     {
                       formatDate((msg as Message).threadLastReplyDate as string)
                         ?.timeRender
@@ -345,7 +345,7 @@ export default function MessageList({
                   </Text>
                   <Flex align="center" gap="xl" className={classes.view}>
                     <Text fz="xs" c={theme.colors.dark[3]}>
-                      View thread
+                      Dizini görüntüle
                     </Text>
                     <BiChevronRight color={theme.colors.dark[3]} />
                   </Flex>

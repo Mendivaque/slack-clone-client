@@ -11,8 +11,8 @@ export default function WorkspacesSvg() {
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
-          Three coworkers work together, sharing files, and sending messages
-          back and forth.
+        Üç iş arkadaşı birlikte çalışıyor, dosya paylaşıyor ve mesaj gönderiyor
+        ileri geri.
         </title>
         <g>
           <path

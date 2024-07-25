@@ -71,15 +71,15 @@ const Verify: NextPage = () => {
         <Flex direction="column" align="center">
           <SlackLogo />
           <Text fz="3xl" fw={600} mt="3xl" c="white">
-            Check your email for a code
-          </Text>
+          Kod için e-postanızı kontrol edin
+                    </Text>
           <Text fz="sm" mt="xs">
-            We've sent a 6-character code to &nbsp;
+           Bu mail adresine 6 karakterli bir kod gönderdik &nbsp;
             <Text span fw={600}>
               {email}.
             </Text>
             <Text span fz="sm" mt="xs">
-              &nbsp;The code expires shortly, so please enter it soon.
+              &nbsp;Kodun süresi kısa bir süre sonra dolacaktır, bu nedenle lütfen hemen girin.
             </Text>
           </Text>
 
@@ -108,12 +108,12 @@ const Verify: NextPage = () => {
           {mutation.isLoading && (
             <Flex align="center" justify="center" gap="sm">
               <Loader size="md" />
-              <Text size="sm">Checking your code</Text>
+              <Text size="sm">Kodunuzu kontrol ediyoruz.</Text>
             </Flex>
           )}
 
           <Text mt="10rem" size="xs">
-            Can't find your code? Check your spam folder!
+          Kodunuzu bulamıyor musunuz? Spam klasörünüzü kontrol edin!
           </Text>
         </Flex>
 
@@ -122,7 +122,7 @@ const Verify: NextPage = () => {
             component="a"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/adeolaadeoti"
+            href=""
             leftIcon={<IoLogoGithub size="1.4rem" />}
             styles={(theme) => ({
               root: {
@@ -140,7 +140,7 @@ const Verify: NextPage = () => {
               },
             })}
           >
-            adeolaadeoti
+            domain
           </MantineButton>
         </Center>
       </Stack>

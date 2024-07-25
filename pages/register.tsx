@@ -56,12 +56,12 @@ const Register: NextPage = () => {
         <Flex direction="column" align="center">
           <SlackLogo />
           <Text fz="3xl" fw={600} mt="3xl" c="white">
-            First, enter your email
+            İlk önce, mail adresinizi girin.
           </Text>
           <Text fz="sm" mt="xs">
-            We suggest using the{' '}
+            İş için kullandığınız{' '}
             <Text span fw={600}>
-              email address you use at work.
+              mail adresini kullanmanızı öneririz.
             </Text>
           </Text>
 
@@ -75,15 +75,15 @@ const Register: NextPage = () => {
                 <Input
                   required
                   label="Email"
-                  placeholder="hello@adeolaadeoti.xyz"
+                  placeholder="kişi@domain.xyz"
                   value={form.values.email}
                   onChange={(event) =>
                     form.setFieldValue('email', event.currentTarget.value)
                   }
-                  error={form.errors.email && 'Invalid email'}
+                  error={form.errors.email && 'Geçersiz mail'}
                 />
                 <Button loading={mutation.isLoading} type="submit">
-                  {mutation.isLoading ? '' : 'Continue'}
+                  {mutation.isLoading ? '' : 'Devam et'}
                 </Button>
                 <Divider label="or" labelPosition="center" my="md" />
                 <MantineButton
@@ -117,10 +117,10 @@ const Register: NextPage = () => {
                 </MantineButton>
                 <Stack spacing="xs" mt="lg">
                   <Text size="xs" align="center">
-                    Already using Slack?
+                    Zaten qnter kullanıyormusun ?
                   </Text>
                   <Anchor size="xs" align="center" href="/signin">
-                    Sign in to an existing workspace
+                  Mevcut bir çalışma alanında oturum açın
                   </Anchor>
                 </Stack>
               </Stack>
@@ -133,7 +133,7 @@ const Register: NextPage = () => {
             component="a"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/adeolaadeoti"
+            href=""
             leftIcon={<IoLogoGithub size="1.4rem" />}
             styles={(theme) => ({
               root: {
@@ -151,7 +151,7 @@ const Register: NextPage = () => {
               },
             })}
           >
-            adeolaadeoti
+            testdomain
           </MantineButton>
         </Center>
       </Stack>

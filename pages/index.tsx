@@ -87,12 +87,11 @@ const Workspaces: NextPage = () => {
         <Flex justify="center">
           <Stack spacing="xs" align="start" w="38%" justify="center">
             <Text fz="3xl" fw={600} c="white">
-              Get started on Slack
+              Qnter'i kullanmaya başlayın!
             </Text>
             <Text fz="sm" mt="xs" w="75%">
-              it's a new way to communicate with everyone you work with. it's
-              faster, better organized, and more secure than email - and it's
-              free to try.
+            birlikte çalıştığınız herkesle iletişim kurmanın yeni bir yolu.
+              e-postadan daha hızlı, daha iyi organize edilmiş ve daha güvenli 
             </Text>
             <Stack>
               <Button
@@ -102,7 +101,7 @@ const Workspaces: NextPage = () => {
                 px="2xl"
                 onClick={() => mutation.mutate()}
               >
-                {mutation.isLoading ? '' : 'Create Workspace'}
+                {mutation.isLoading ? '' : 'Çalışma alanı oluştur'}
               </Button>
             </Stack>
           </Stack>
@@ -122,17 +121,17 @@ const Workspaces: NextPage = () => {
           )}
           {organisations?.length >= 1 && (
             <Text fw="bold" c="white" mb="xl">
-              Open a workspace
+              Bir çalışma alanı oluştur
             </Text>
           )}
           {organisations?.length === 0 ? (
             <Center>
               <Flex direction="column" align="center" justify="center">
                 <Text fz="lg" fw={600} c="white">
-                  is your team already on Slack?
+                  Takımın zaten qnter'de mi ?
                 </Text>
                 <Text fz="sm" mt="xs" w="75%" align="center">
-                  We coudn't find any existing workspaces for the email address{' '}
+                E-posta adresi için mevcut herhangi bir çalışma alanı bulamadık
                   {email}
                 </Text>
                 <Button
@@ -141,7 +140,7 @@ const Workspaces: NextPage = () => {
                   px="2xl"
                   onClick={() => router.push('/signin')}
                 >
-                  Try a Different Email
+                  Farklı bir mail adresi dene!
                 </Button>
               </Flex>
             </Center>
@@ -173,7 +172,7 @@ const Workspaces: NextPage = () => {
                         {organisation.name}
                       </Text>
                       <Text size="xs" transform="capitalize">
-                        {organisation.coWorkers.length} members
+                        {organisation.coWorkers.length} üye
                       </Text>
                     </Flex>
                   </Flex>
@@ -182,7 +181,7 @@ const Workspaces: NextPage = () => {
                     rightIcon={<BsArrowRightShort />}
                     appearance="outline"
                   >
-                    Open
+                    Aç
                   </Button>
                 </Flex>
               ))}

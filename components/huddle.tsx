@@ -385,7 +385,7 @@ export default function Huddle({
               {selected?.name}
             </Text>
             <Tooltip
-              label={`${popupWindow ? 'Close' : 'Open'} mini window`}
+              label={`${popupWindow ? 'Kapat' : 'Aç'} küçük pencereyi`}
               withArrow
               position="top"
             >
@@ -414,7 +414,7 @@ export default function Huddle({
           </BackgroundImage>
           <Flex gap="sm" align="center">
             <Tooltip
-              label={`${!audioEnabled ? 'Unmute' : 'Mute'} mic`}
+              label={`${!audioEnabled ? 'Aç' : 'Kapa'}:Mikrofon`}
               withArrow
               position="top"
             >
